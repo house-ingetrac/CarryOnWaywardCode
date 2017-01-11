@@ -1,0 +1,10 @@
+1. Create UserInterface interface, which will give the driver access to a play() method.
+2. Create abstract Minigames superclass which extends UserInterface.
+3. Create BlackJack, Slots, and Roulette which will extend the Minigames superclass.
+4. Create (simplified) Driver class to test the games.
+5. Create Hub class which implements UserInterface.
+6. Create abstract Burger superclass.
+7. Create FutureSight, SlowTime, and MagnetosHand which will extend the Burger superclass.
+8. Create FoodCourt class which implements UserInterface.
+9. Create Cutscenes class.
+10. Update Driver and all other classes to work together.
