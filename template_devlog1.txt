@@ -1,5 +1,5 @@
 CarryOnWaywardCode
-Alessandro Couthon
+Alessandro Cartegni
 Elvin Hwang
 Ricky Chen
 pd 3
@@ -55,13 +55,13 @@ tales of wisdom gained...
  \:\ \ \ \\:\/___/\\:\ \\ \ \\:\ \    \:\ \ \ \\:\ /____/\ 
   \:\ \ \ \\::___\/_\:\_/.:\ \\:\ \____\:\ \ \ \\:\\_  _\/ 
    \:\/.:| |\:\____/\\ ..::/ / \:\/___/\\:\_\ \ \\:\_\ \ \ 
-    \____/_/ \_____\/ \___/_(   \_____\/ \_____\/ \_____\/ 
+    \____/_/ \_____\/ \___/_/   \_____\/ \_____\/ \_____\/ 
 ==============================================================
 
 
 2017-01-17
 --------------------------------------------------------------
-Alessandro :: <Thing member did.>
+Alessandro :: More detailed planning of how roulette works, and also started developing the story.
 Elvin :: <Thing member did.>
 Ricky :: Planned out the implementation of powerups and Slots.
 ==============================================================
