@@ -1,10 +1,10 @@
-<Team Name>
-<Member 0 Name>
-<Member 1 Name>
-<Member 2 Name>
-pd <pd#>
+CarryOnWaywardCode
+Alessandro Couthon
+Elvin Hwang
+Ricky Chen
+pd 3
 ---------------------
-<Project>
+Escape the Casino!
 
 
 Suggested usage: 
@@ -58,6 +58,27 @@ tales of wisdom gained...
     \____/_/ \_____\/ \___/_(   \_____\/ \_____\/ \_____\/ 
 ==============================================================
 
+
+2017-01-17
+--------------------------------------------------------------
+Alessandro :: <Thing member did.>
+Elvin :: <Thing member did.>
+Ricky :: Planned out the implementation of powerups and Slots.
+==============================================================
+
+yyyy-mm-dd
+--------------------------------------------------------------
+<Member> :: <Thing member did.>
+<Member> :: <Thing member did.>
+<Member> :: <Thing member did.>
+==============================================================
+
+yyyy-mm-dd
+--------------------------------------------------------------
+<Member> :: <Thing member did.>
+<Member> :: <Thing member did.>
+<Member> :: <Thing member did.>
+==============================================================
 
 yyyy-mm-dd
 --------------------------------------------------------------
