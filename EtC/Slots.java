@@ -1,3 +1,5 @@
+import cs1.Keyboard;
+
 public class Slots extends Minigames{
     private String[][] machine = { {"7", "cherry", "pear", "zebra", "unicorn", "piccolo"},
 				   {"7", "cherry", "pear", "zebra", "unicorn", "piccolo"},
