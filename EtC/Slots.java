@@ -97,14 +97,15 @@ public class Slots extends Minigames{
     }
 
     private void bet(){
-        betAmount = Keyboard.readInt();
+        int holder = Keyboard.readInt();
 	
-	if (betAmount > player.getMoney()){
+	if (holder > player.getMoney()){
 	    System.out.println("Amount greater than what you have on hand. Try again:");
 	    bet();
 	}
 
 	else{
+	    betAmount = holder;
 	    player.alterMoney(betAmount * -1);
 	    System.out.println("Bet placed. Your money is now " + player.getMoney() + ".");
 	}
@@ -123,13 +124,15 @@ public class Slots extends Minigames{
 
 	if (! machine[0][display[0]].equals("7"))
 	    trip7 = false;
-	if (machine[1][display[1]].equals("7"))
+	if (! machine[1][display[1]].equals("7"))
 	    trip7 = false;
-	if (machine[2][display[2]].equals("7"))
+	if (! machine[2][display[2]].equals("7"))
 	    trip7 = false;
 	
-	if (matches < 2)
+	if (matches == 0)
 	    return 0;
+	if (matches == 1)
+	    return (int) (betAmount * 1.5);
 	if (matches == 2)
 	    return (int) (betAmount * 1.5);
 	if (matches == 3 && trip7)
@@ -137,7 +140,7 @@ public class Slots extends Minigames{
 	if (matches == 3)
 	    return (betAmount * 3);
 	else{
-	    return 0;
+	    return 3;
 	}
     }
 
@@ -147,12 +150,5 @@ public class Slots extends Minigames{
 
     private void eatBurger(){
 	//for later dev
-    }
-
-    public static void main(String[] args){
-	Slots ash = new Slots();
-	
-
-	ash.play();
     }
 }
