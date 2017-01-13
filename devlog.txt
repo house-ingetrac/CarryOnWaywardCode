@@ -59,18 +59,18 @@ tales of wisdom gained...
 ==============================================================
 
 
-2017-01-17
+2017-01-11
 --------------------------------------------------------------
 Alessandro :: More detailed planning of how roulette works, and also started developing the story.
 Elvin :: Zoomed-in flowchart of BlackJack and story developing.
 Ricky :: Planned out the implementation of powerups and Slots.
 ==============================================================
 
-yyyy-mm-dd
+2017-01-12
 --------------------------------------------------------------
 <Member> :: <Thing member did.>
 <Member> :: <Thing member did.>
-<Member> :: <Thing member did.>
+Ricky :: Finished implementation of Slots and created Driver.
 ==============================================================
 
 yyyy-mm-dd
