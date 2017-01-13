@@ -31,7 +31,7 @@ public class Driver{
 	    if (result == 1)
 		Slotman.play();
 	    if(result == 2)
-		Roulette.play();
+		Rouletteman.play();
 	    if (result == 3)
 		return;
 	}
