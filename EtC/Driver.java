@@ -14,6 +14,7 @@ public class Driver{
     public static void main(String[] args){
 	Driver Driverman = new Driver();
 	UserInterface Slotman = new Slots();
+	UserInterface Rouletteman = new Roulette();
 
 	while (Driverman.money > 0){
 	    String s = "Welcome to Escape the Casino's MVP!\n";
@@ -29,6 +30,8 @@ public class Driver{
 	    int result = Keyboard.readInt();
 	    if (result == 2)
 		Slotman.play();
+	    if(result == 3)
+		Roulette.play();
 	    if (result == 4)
 		return;
 	}

@@ -41,7 +41,7 @@ public class Roulette extends Minigames{
 
 		spin();
 		
-		int winAmount = winCondition();
+		int winAmount = betAmount * (winCondition());
 		player.alterMoney(winAmount);
 		System.out.println("You won $" + winCondition() + "!");
 	    }
@@ -54,19 +54,24 @@ public class Roulette extends Minigames{
 	betOn = Keyboard.readInt();
 	System.out.println("The dealer spins the roulette, twisting his mustache as it slows down.");
 	if(betOn == 0 && (result == 0 || result == 40)){
-	    winType = 3;	    
+	    winType = 3;
+	    return;
 	}
 	else{
 	    if(result == betOn){
-		winType = 2;	
+		winType = 2;
+		return;
 	    }
 	    else if(result % 2 == 0 && betOn == 42){
-		winType = 1;	
+		winType = 1;
+		return;
 	    }
 	    else if(result % 2 == 1 && betOn == 41){
 		winType = 1;
+		return;
 	    }
 	    else{
+		winType = 0;
 		System.out.println("Sorry, you lose. Try again.");
 	    }
 	}
@@ -91,10 +96,10 @@ public class Roulette extends Minigames{
 	if(winType == 1){
 	    return 2;
 	}
-	if(winType == 2){
+	else if(winType == 2){
 	    return 40;
 	}
-	if(winType == 3){
+	else if(winType == 3){
 	    return 20;
 	}
 	else{
