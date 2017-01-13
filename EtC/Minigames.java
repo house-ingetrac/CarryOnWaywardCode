@@ -1,9 +1,14 @@
-public abstract Minigames{
+public abstract class Minigames implements UserInterface{
     protected double multiplier;
     protected int betAmount;
 
-    protected abstract void RPGBattle();
-    protected abstract void eatBurger();
-    protected abstract void bet();
+    public abstract void play();
+
+    private void RPGBattle(){
+    }
+    private void eatBurger(){
+    }
+    private void bet(){
+    }
     
 }
