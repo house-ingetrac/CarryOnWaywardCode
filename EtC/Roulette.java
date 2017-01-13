@@ -40,10 +40,11 @@ public class Roulette extends Minigames{
 		bet();
 
 		spin();
-		
-		int winAmount = betAmount * (winCondition());
+
+		winCondition();
+		int winAmount = betAmount * (int)multiplier;
 		player.alterMoney(winAmount);
-		System.out.println("You won $" + winCondition() + "!");
+		System.out.println("You won $" + winAmount + "!");
 	    }
 	}
     }
@@ -94,17 +95,18 @@ public class Roulette extends Minigames{
 
     private int winCondition(){
 	if(winType == 1){
-	    return 2;
+	    multiplier = 2;
 	}
 	else if(winType == 2){
-	    return 40;
+	    multiplier = 40;
 	}
 	else if(winType == 3){
-	    return 20;
+	    multiplier = 20;
 	}
 	else{
-	    return 0;
+	    multiplier = 0;
 	}
+	return (int)multiplier;
     }
 	    
     

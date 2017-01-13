@@ -19,7 +19,7 @@ public class Driver{
 	while (Driverman.money > 0){
 	    String s = "Welcome to Escape the Casino's MVP!\n";
 	    s += "(So basically just a Casino)\n";
-	    s += "Your money is currently" + Driverman.money + "\n";
+	    s += "Your money is currently " + Driverman.money + "\n";
 	    s += "Please choose from the following selection:\n";
 	    s += "1. Slots\n";
 	    s += "2. Roulette\n";
