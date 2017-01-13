@@ -17,6 +17,26 @@ public class Driver{
 	UserInterface Rouletteman = new Roulette();
 
 	while (Driverman.money > 0){
+	    String ascii = " \n";
+	    ascii += "         Welcome To:\n";
+	    ascii += " \n";
+	    ascii += "         ESCAPE THE\n";
+	    ascii += "  ___  _  __ __  _  _ ___ _\n";
+	    ascii += " / __\\/ \\/ _|_ _| \\| /   | | \n";
+	    ascii += "| (__/ ^ \\_ \\| ||  `|  O |_|\n";
+	    ascii += " \\__/_---/__|___|_|\\_\\___(_)\n";
+	    ascii += "    _____________________\n";
+	    ascii += "   //////////777\\\\\\\\\\\\\\\\\\\\ \n";
+	    ascii += "  |    *-------------*    |\n";
+	    ascii += "  |    | |2| |5| |3| |    |\n";
+	    ascii += "  |    |-|7| |7| |7|-|    |\n";
+	    ascii += "  |    | |8| |1| |5| | O  |\n";
+	    ascii += "  |    *-------------*/   |\n";
+	    ascii += "  |      LUCKY SEVEN /    |\n";
+	    ascii += "  |                 ||    |\n";
+	    ascii += " \n";
+	    System.out.println(ascii);
+
 	    String s = "Welcome to Escape the Casino's MVP!\n";
 	    s += "(So basically just a Casino)\n";
 	    s += "Your money is currently " + Driverman.money + "\n";
