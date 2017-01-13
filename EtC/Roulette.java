@@ -49,27 +49,22 @@ public class Roulette extends Minigames{
     }
 
     private void spin(){
-	int result = (int)Math.random() * 41;
+	int result = (int)(Math.random() * 41);
 	System.out.println("Enter a number 1-39, 41 for all Reds, 42 for all Blacks, or 0 for white.");
 	betOn = Keyboard.readInt();
 	System.out.println("The dealer spins the roulette, twisting his mustache as it slows down.");
 	if(betOn == 0 && (result == 0 || result == 40)){
-	    winType = 3;
-	    System.out.println("You Win!");
-	    return;
+	    winType = 3;	    
 	}
 	else{
 	    if(result == betOn){
-		winType = 2;
-		System.out.println("You Win!");
+		winType = 2;	
 	    }
-	    if(result % 2 == 0 && betOn == 42){
-		winType = 1;
-		System.out.println("You Win!");
+	    else if(result % 2 == 0 && betOn == 42){
+		winType = 1;	
 	    }
-	    if(result % 2 == 1 && betOn == 41){
+	    else if(result % 2 == 1 && betOn == 41){
 		winType = 1;
-		System.out.println("You Win!");
 	    }
 	    else{
 		System.out.println("Sorry, you lose. Try again.");
