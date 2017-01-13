@@ -21,18 +21,18 @@ public class Driver{
 	    s += "(So basically just a Casino)\n";
 	    s += "Your money is currently" + Driverman.money + "\n";
 	    s += "Please choose from the following selection:\n";
-	    s += "1. BlackJack\n";
-	    s += "2. Slots\n";
-	    s += "3. Roulette\n";
-	    s += "4. Quit\n";
+	    s += "1. Slots\n";
+	    s += "2. Roulette\n";
+	    //s += "3. BlackJack\n";
+	    s += "3. Quit\n";
 	    System.out.println(s);
 
 	    int result = Keyboard.readInt();
-	    if (result == 2)
+	    if (result == 1)
 		Slotman.play();
-	    if(result == 3)
+	    if(result == 2)
 		Roulette.play();
-	    if (result == 4)
+	    if (result == 3)
 		return;
 	}
 
