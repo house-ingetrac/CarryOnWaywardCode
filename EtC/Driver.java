@@ -15,6 +15,10 @@ public class Driver{
 	Driver Driverman = new Driver();
 	UserInterface Slotman = new Slots();
 	UserInterface Rouletteman = new Roulette();
+	Burger FS = new FutureSight(Driverman);
+	Burger ST = new SlowTime(Driverman);
+	Burger MH = new MagnetosHand(Driverman);
+	UserInterface Foodman = new FoodCourt();
 
 	while (Driverman.money > 0){
 	    String ascii = " \n";
