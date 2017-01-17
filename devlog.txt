@@ -6,12 +6,6 @@ pd 3
 ---------------------
 Escape the Casino!
 
-
-Suggested usage: 
-* Replace all fields, angle brackets included, with specified info.
-  eg, pd <pd#> --> pd 3
-* Delete these instructions once all teammates understand usage.
-
 devlog--
 Use keyboard shortcut to jump to end,
  replicate entry template,
@@ -68,7 +62,7 @@ Ricky :: Planned out the implementation of powerups and Slots.
 
 2017-01-12
 --------------------------------------------------------------
-<Member> :: <Thing member did.>
+Alessandro :: Created MVP implementation of Roulette
 <Member> :: <Thing member did.>
 Ricky :: Finished implementation of Slots and created Driver.
 ==============================================================
