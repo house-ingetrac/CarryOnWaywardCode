@@ -1,27 +1,25 @@
 # CarryOnWaywardCode#
 
-         ESCAPE THE
-
-
+                                            ESCAPE THE
 ```
-  ___  _  __ ___ _  _ ___ _    
- / __\/ \/ _|_ _| \| /   | |   
-| (__/ ^ \_ \| ||  `|  O |_|    
- \__/_---/__|___|_|\_\___(_)    
+                                     ___  _  __ ___ _  _ ___ _    
+                                    / __\/ \/ _|_ _| \| /   | |   
+                                   | (__/ ^ \_ \| ||  `|  O |_|    
+                                    \__/_---/__|___|_|\_\___(_)    
 ```
 ```
-    _____________________    
-   //////////777\\\\\\\\\\    
-  |    *-------------*    |    
-  |    | |2| |5| |3| |    |    
-  |    |-|7| |7| |7|-|    |    
-  |    | |8| |1| |5| | O  |    
-  |    *-------------*/   |    
-  |      LUCKY SEVEN /    |    
-  |                 ||    |
+                                       _____________________    
+                                      //////////777\\\\\\\\\\    
+                                     |    *-------------*    |    
+                                     |    | |2| |5| |3| |    |    
+                                     |    |-|7| |7| |7|-|    |    
+                                     |    | |8| |1| |5| | O  |    
+                                     |    *-------------*/   |    
+                                     |      LUCKY SEVEN /    |    
+                                     |                 ||    |
 ```
 
-:spades::hearts::clubs::diamonds::spades::hearts::clubs::diamonds::spades::hearts::clubs::diamonds:
+:spades::hearts::clubs::diamonds::spades::hearts::clubs::diamonds::spades::hearts::clubs::diamonds::spades::hearts::clubs::diamonds::spades::hearts::clubs::diamonds::spades::hearts::clubs::diamonds::spades::hearts::clubs::diamonds::spades::hearts::clubs::diamonds::spades::hearts::clubs::diamonds::spades::hearts::clubs::diamonds::spades::hearts::clubs::diamonds::spades::hearts::clubs::diamonds:
 
 
 ##Project Descripton:##
