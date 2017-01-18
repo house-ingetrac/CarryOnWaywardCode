@@ -1,7 +1,7 @@
-import cs1.Keyboard;
+package cs1;
 
 public class Utils{
     public static int readInt(){
-	Keyboard.readInt();
+	return Keyboard.readInt();
     }
 }
