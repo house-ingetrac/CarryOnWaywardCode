@@ -1,4 +1,4 @@
-# CarryOnWaywardCode
+# CarryOnWaywardCode#
 
          ESCAPE THE
 
@@ -24,8 +24,8 @@
 :spades::hearts::clubs::diamonds::spades::hearts::clubs::diamonds::spades::hearts::clubs::diamonds:
 
 
-Project Descripton:
+##Project Descripton:##
 Escape the Casino is a casino simulation with RPG elements. The player's objective is to win enough money to defeat the bosses, or dealers. This allows them to escape the casino where they are kept prisoner. The games available are Blackjack, Slots, and Roulette. Additionally, there are powerups available for purchase in the Food Court, which help in the different games. Based on player performance, the game has three different endings.
 
-Launch Instructions:
+##Launch Instructions:##
 In an up-to-date CarryOnWaywardCode directory, run `$ javac Woo.java` then `$ java Woo`. This will launch the start screen of the game, from which you can start your playthrough.
