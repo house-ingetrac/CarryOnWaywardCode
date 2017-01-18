@@ -18,7 +18,7 @@ public class Driver{
 	Burger FS = new FutureSight(Driverman);
 	Burger ST = new SlowTime(Driverman);
 	Burger MH = new MagnetosHand(Driverman);
-	UserInterface Foodman = new FoodCourt();
+	UserInterface Foodman = new FoodCourt(FS, ST, MH);
 
 	while (Driverman.money > 0){
 	    String ascii = " \n";
@@ -48,7 +48,8 @@ public class Driver{
 	    s += "1. Slots\n";
 	    s += "2. Roulette\n";
 	    //s += "3. BlackJack\n";
-	    s += "3. Quit\n";
+	    s += "3. Food Court\n";
+	    s += "4. Quit\n";
 	    System.out.println(s);
 
 	    int result = Keyboard.readInt();
@@ -57,6 +58,8 @@ public class Driver{
 	    if(result == 2)
 		Rouletteman.play();
 	    if (result == 3)
+	        Foodman.play();
+	    if (result == 4)
 		return;
 	}
 

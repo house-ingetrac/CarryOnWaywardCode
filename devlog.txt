@@ -67,11 +67,11 @@ Alessandro :: Created MVP implementation of Roulette
 Ricky :: Finished implementation of Slots and created Driver.
 ==============================================================
 
-yyyy-mm-dd
+2017-01-17
 --------------------------------------------------------------
 <Member> :: <Thing member did.>
 <Member> :: <Thing member did.>
-<Member> :: <Thing member did.>
+Ricky :: Finished implementation of Food Court.
 ==============================================================
 
 yyyy-mm-dd

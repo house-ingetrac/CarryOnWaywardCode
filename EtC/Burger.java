@@ -18,7 +18,7 @@ public abstract class Burger{
     public abstract void eat();
 
     public void buy(int qua){
-	if (player.getMoney < (price * qua)){
+	if (player.getMoney() < (price * qua)){
 	    System.out.println("Not enough cash!");
 	    return;
 	}
