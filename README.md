@@ -16,7 +16,8 @@
   |    | |8| |1| |5| | O  |    
   |    *-------------*/   |    
   |      LUCKY SEVEN /    |    
-  |                 ||    |```
+  |                 ||    |
+```
 
 :spades::hearts::clubs::diamonds::spades::hearts::clubs::diamonds::spades::hearts::clubs::diamonds:
 
