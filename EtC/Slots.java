@@ -1,22 +1,26 @@
 import cs1.Keyboard;
 
 public class Slots extends Minigames{
-    private String[][] machine = { {"7", "cherry", "pear", "zebra", "unicorn", "piccolo"},
+    private final String[][] machine = { {"7", "cherry", "pear", "zebra", "unicorn", "piccolo"},
 				   {"7", "cherry", "pear", "zebra", "unicorn", "piccolo"},
 				   {"7", "cherry", "pear", "zebra", "unicorn", "piccolo"}, };
     private int[] display = new int[3];
     private Driver player;
+    private Burger ST;
+    private slow = false;
 
     public Slots(){
 	betAmount = 0;
 	multiplier = 1;
 	player = new Driver();
+	ST = new SlowTime();
     }
 
-    public Slots(Driver playman){
+    public Slots(Driver playman, Burger st){
 	betAmount = 0;
 	multiplier = 1;
 	player = playman;
+	ST = st;
     }
 
     public void play(){
@@ -27,12 +31,15 @@ public class Slots extends Minigames{
 	    
 	    String s = "Welcome to Slots!\n";
 	    s += "1. Play Game\n";
-	    s += "2. Go Back\n";
+	    s += "2. Eat Burger\n";
+	    s += "3. Go Back\n";
 	    System.out.print(s);
 	    
 	    int response = Keyboard.readInt();
 
-	    if (response == 2) return;
+	    if (response == 3) return;
+
+	    if (response == 2) eatBurger();
 	    
 	    if (response == 1){
 	        s = "Place your bet!\n";
@@ -54,20 +61,27 @@ public class Slots extends Minigames{
 		int winAmount = winCondition();
 		player.alterMoney(winAmount);
 		System.out.println("You won $" + winCondition() + "!");
+		slow = false;
 	    }
 	}
     }
 
     private void pull(int index){
-        int start = (int) (System.nanoTime() / Math.pow(10.0, 9.0));
-	String s = "The images whirl by, your eye unable to catch them.\n";
-	s += "Enter any key to pull the lever:";
-	System.out.print(s);
-	Keyboard.readString();
+	if (! slow){
+	    int start = (int) (System.nanoTime() / Math.pow(10.0, 9.0));
+	    String s = "The images whirl by, your eye unable to catch them.\n";
+	    s += "Enter any key to pull the lever:";
+	    System.out.print(s);
+	    Keyboard.readString();
 
-	System.out.println();
-        int end = ((int) (System.nanoTime() / Math.pow(10.0, 9.0))) - start;
-        System.out.println("You pull the lever, making one of the columns slow down before it comes to a hault:\n");
+	    System.out.println();
+	    int end = ((int) (System.nanoTime() / Math.pow(10.0, 9.0))) - start;
+	    System.out.println("You pull the lever, making one of the columns slow down before it comes to a hault:\n");
+	}
+
+	else{
+	    
+	}
 	
 	int i = 0;
 	while (i < 10){
@@ -149,6 +163,6 @@ public class Slots extends Minigames{
     }
 
     private void eatBurger(){
-	//for later dev
+        if (Burger.eat()) slow = true;
     }
 }

@@ -15,7 +15,7 @@ public abstract class Burger{
 	price = 0;
     }
 
-    public abstract void eat();
+    public abstract boolean eat();
 
     public void buy(int qua){
 	if (player.getMoney() < (price * qua)){
