@@ -69,7 +69,7 @@ Ricky :: Finished implementation of Slots and created Driver.
 
 2017-01-17
 --------------------------------------------------------------
-<Member> :: <Thing member did.>
+Alessandro :: Wrote and formatted README
 <Member> :: <Thing member did.>
 Ricky :: Finished implementation of Food Court.
 ==============================================================
