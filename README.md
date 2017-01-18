@@ -1,6 +1,6 @@
 # CarryOnWaywardCode#
 
-                                                   **ESCAPE THE**
+                                                  ` **ESCAPE THE** `
 ```
                                            ___  _  __ ___ _  _ ___ _    
                                           / __\/ \/ _|_ _| \| /   | |   
