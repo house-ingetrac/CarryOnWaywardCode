@@ -2,6 +2,10 @@ import cs1.Keyboard;
 public class Driver{
     private int money = 100;
 
+    public boolean slotsKill = false;
+    public boolean rouletteKill = false;
+    public boolean blackjackKill = false;
+
     //amount can be negative
     public void alterMoney(int amount){
 	money += amount;
