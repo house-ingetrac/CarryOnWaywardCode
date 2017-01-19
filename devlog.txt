@@ -74,6 +74,19 @@ Alessandro :: Wrote and formatted README
 Ricky :: Finished implementation of Food Court.
 ==============================================================
 
+2017-01-18
+--------------------------------------------------------------
+<Member> :: <Thing member did.>
+<Member> :: <Thing member did.>
+Ricky :: Worked on SlowTime implementation.
+==============================================================
+
+yyyy-mm-dd
+--------------------------------------------------------------
+<Member> :: <Thing member did.>
+<Member> :: <Thing member did.>
+<Member> :: <Thing member did.>
+==============================================================
 yyyy-mm-dd
 --------------------------------------------------------------
 <Member> :: <Thing member did.>

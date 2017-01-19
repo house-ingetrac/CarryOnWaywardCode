@@ -4,7 +4,7 @@ public class SlowTime extends Burger{
 	price = 40;
     }
 
-    public boolean eat(boolean lul){
+    public boolean eat(){
 	if (quantity > 0){
 	    quantity -= 1;
 	    System.out.println("Slow Time activated!");
