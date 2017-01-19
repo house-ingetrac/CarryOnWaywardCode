@@ -1,4 +1,5 @@
 import cs1.Keyboard;
+import cs1.Utils;
 
 public class Slots extends Minigames{
     private final String[][] machine = { {"7", "cherry", "pear", "zebra", "unicorn", "piccolo"},
@@ -72,7 +73,7 @@ public class Slots extends Minigames{
 	int end = 0;
 	
 	if (! slow){
-	     start = (int) (System.nanoTime() / Math.pow(10.0, 9.0));
+	    start = (int) (System.nanoTime() / Math.pow(10.0, 9.0));
 	    s = "The images whirl by, your eye unable to catch them.\n";
 	    s += "Enter any key to pull the lever:";
 	    System.out.print(s);
@@ -80,13 +81,11 @@ public class Slots extends Minigames{
 
 	    System.out.println();
 	    end = ((int) (System.nanoTime() / Math.pow(10.0, 9.0))) - start;
-	    System.out.println("You pull the lever, making one of the columns slow down before it comes to a hault:\n");
+	    System.out.println("You pull the lever, making one of the columns slow down before it comes to a halt:\n");
 	}
 
 	else{
-	    s = "The images whirl by, your eye unable to catch them.\n";
-	    start = (int) (System.nanoTime() / Math.pow(10.0, 9.0));
-	    end = ((int) (System.nanoTime() / Math.pow(10.0, 9.0))) - start;
+	    
 	}
 	
 	int i = 0;
