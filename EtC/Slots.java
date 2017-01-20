@@ -42,7 +42,7 @@ public class Slots extends Minigames{
 
 	    if (response == 2) this.eatBurger();
 	    
-	    if (response == 1){
+	    if (response == 1 || response == 2){
 	        s = "Place your bet!\n";
 		System.out.print(s);
 		bet();
@@ -164,7 +164,7 @@ public class Slots extends Minigames{
     }
 
     private void RPGBattle(){
-	//for later dev
+        //for later dev
     }
 
     private void eatBurger(){
