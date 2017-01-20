@@ -27,13 +27,14 @@ public class Roulette extends Minigames{
 	    
 	    String s = "Welcome to Roulette!\n";
 	    s += "1. Play Game\n";
-	    s += "2. Go Back\n";
-	    s += "3. Fight the dealer\n";
+	    s += "2. Eat Burger\n";
+	    s += "3. Fight dealer\n"
+	    s += "4. Go back\n";
 	    System.out.print(s);
 	    
 	    int response = Keyboard.readInt();
 
-	    if (response == 2) return;
+	    if (response == 4) return;
 	    
 	    if (response == 1){
 	        s = "Place your bet!\n";
