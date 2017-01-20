@@ -41,7 +41,9 @@ public class Slots extends Minigames{
 
 	    if (response == 4) return;
 
-	    if (response == 2) this.eatBurger();
+	    if (response == 2){
+		eatBurger();
+	    }
 	    
 	    if (response == 1){
 	        s = "Place your bet!\n";
