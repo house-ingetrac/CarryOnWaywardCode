@@ -57,10 +57,20 @@ public class Driver{
 	    System.out.println(s);
 
 	    int result = Keyboard.readInt();
-	    if (result == 1)
+	    if (result == 1 && player.slotsKill == false){
 		Slotman.play();
-	    if(result == 2)
+	    }
+	    else{
+		System.out.println("Already beat boss.");
+	    }
+
+	     if (result == 1 && player.rouletteKill == false){
 		Rouletteman.play();
+	    }
+	    else{
+		System.out.println("Already beat boss.");
+	    }
+
 	    if (result == 3)
 	        Foodman.play();
 	    if (result == 4)
