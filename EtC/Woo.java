@@ -51,9 +51,9 @@ public class Woo{
 	    s += "Please choose from the following selection:\n";
 	    s += "1. Slots\n";
 	    s += "2. Roulette\n";
-	    //s += "3. BlackJack\n";
-	    s += "3. Food Court\n";
-	    s += "4. Quit\n";
+	    s += "3. BlackJack\n";
+	    s += "4. Food Court\n";
+	    s += "5. Quit\n";
 	    System.out.println(s);
 
 	    int result = Keyboard.readInt();
@@ -64,16 +64,21 @@ public class Woo{
 		System.out.println("Already beat boss.");
 	    }
 
-	     if (result == 1 && Driverman.rouletteKill == false){
+	    if (result == 2 && Driverman.rouletteKill == false){
 		Rouletteman.play();
 	    }
 	    else{
 		System.out.println("Already beat boss.");
 	    }
-
-	    if (result == 3)
-	        Foodman.play();
+	    if (result == 3 && Driverman.rouletteKill == false){
+		Rouletteman.play();
+	    }
+	    else{
+		System.out.println("Already beat boss.");
+	    }
 	    if (result == 4)
+	        Foodman.play();
+	    if (result == 5)
 		return;
 	}
 
