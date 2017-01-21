@@ -1,5 +1,5 @@
 public class SlowTime extends Burger{
-    public SlowTime(Driver playperson){
+    public SlowTime(Woo playperson){
 	super(playperson);
 	price = 40;
     }

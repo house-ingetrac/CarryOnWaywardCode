@@ -1,5 +1,5 @@
 import cs1.Keyboard;
-public class Driver{
+public class Woo{
     private int money = 100;
 
     public boolean slotsKill = false;
@@ -16,7 +16,7 @@ public class Driver{
     }
 
     public static void main(String[] args){
-	Driver Driverman = new Driver();
+	Woo Driverman = new Woo();
 	UserInterface Slotman = new Slots();
 	UserInterface Rouletteman = new Roulette();
 	Burger FS = new FutureSight(Driverman);
@@ -57,14 +57,14 @@ public class Driver{
 	    System.out.println(s);
 
 	    int result = Keyboard.readInt();
-	    if (result == 1 && player.slotsKill == false){
+	    if (result == 1 && Driverman.slotsKill == false){
 		Slotman.play();
 	    }
 	    else{
 		System.out.println("Already beat boss.");
 	    }
 
-	     if (result == 1 && player.rouletteKill == false){
+	     if (result == 1 && Driverman.rouletteKill == false){
 		Rouletteman.play();
 	    }
 	    else{

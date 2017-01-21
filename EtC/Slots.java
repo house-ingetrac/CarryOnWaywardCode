@@ -6,18 +6,18 @@ public class Slots extends Minigames{
 				   {"7", "cherry", "pear", "zebra", "unicorn", "piccolo"},
 				   {"7", "cherry", "pear", "zebra", "unicorn", "piccolo"}, };
     private int[] display = new int[3];
-    private Driver player;
+    private Woo player;
     private Burger ST;
     private boolean slow = false;
 
     public Slots(){
 	betAmount = 0;
 	multiplier = 1;
-	player = new Driver();
+	player = new Woo();
 	ST = new SlowTime(player);
     }
 
-    public Slots(Driver playman, Burger st){
+    public Slots(Woo playman, Burger st){
 	betAmount = 0;
 	multiplier = 1;
 	player = playman;
@@ -172,9 +172,9 @@ public class Slots extends Minigames{
     }
 
     private void RPGBattle(){
-<<<<<<< HEAD
+	//<<<<<<< HEAD
         //for later dev
-=======
+	//=======
 	String s = "Do you want to fight the security man?\n";
 	s += "1. LEEEROOOOOOY JENKIINS!!!\n";
 	s += "2. Maybe later\n";
@@ -194,7 +194,7 @@ public class Slots extends Minigames{
 		String msgW = "";
 		msgW += "Your shots collide at quasi-relativistic speeds (5 m/s) with the security man.\n";
 		msgW += "He falls to the floor, unconscious, and you leave victorious.";
-		System.out.println(msg);
+		System.out.println(msgW);
 	    }
 	    else{
 		String msgL = "";
@@ -204,7 +204,7 @@ public class Slots extends Minigames{
 	    }
 	}
 	
->>>>>>> de209d8bfea10bb52bf9a2315b122836fba9f487
+	//>>>>>>> de209d8bfea10bb52bf9a2315b122836fba9f487
     }
     
     private void eatBurger(){
