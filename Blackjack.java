@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Blackjack extends Minigames{
     private int counter = 2;
-    private Driver player;
+    private Woo player;
     private String[] suits = { "of diamonds", "of clubs", "of hearts", "of spades"};
     ArrayList combination = new ArrayList();
     int totalCards;
@@ -14,10 +14,10 @@ public class Blackjack extends Minigames{
     public Blackjack() {
 	betAmount = 0;
 	multiplier = 1;
-	player = new Driver();
+	player = new Woo();
 	totalCards = 0;
     }
-    public Blackjack(Driver playman){
+    public Blackjack(Woo playman){
 	betAmount = 0;
 	multiplier = 1;
 	totalCards = 0;
