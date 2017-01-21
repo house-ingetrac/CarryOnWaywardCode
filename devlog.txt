@@ -76,14 +76,14 @@ Ricky :: Finished implementation of Food Court.
 
 2017-01-18
 --------------------------------------------------------------
-<Member> :: <Thing member did.>
+Alessandro :: Created endings and implemented winning.
 <Member> :: <Thing member did.>
 Ricky :: Worked on SlowTime implementation.
 ==============================================================
 
-yyyy-mm-dd
+2017-01-20
 --------------------------------------------------------------
-<Member> :: <Thing member did.>
+Alessandro :: Implemented fights.
 <Member> :: <Thing member did.>
 <Member> :: <Thing member did.>
 ==============================================================
