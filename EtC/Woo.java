@@ -71,8 +71,8 @@ public class Woo{
 	    else{
 		System.out.println("Already beat boss.");
 	    }
-	    if (result == 3 && Driverman.rouletteKill == false){
-		Rouletteman.play();
+	    if (result == 3 && Driverman.blackjackKill == false){
+		Blackjackman.play();
 	    }
 	    else{
 		System.out.println("Already beat boss.");
