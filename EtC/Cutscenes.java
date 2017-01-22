@@ -33,12 +33,12 @@ public class Cutscenes{
 	s += " \n";
 	s += "*You are now outside the casino, and there is a burger that you\n";
 	s += "recognize as from the food court on the ground in front of you.\n";
-	s += "You take a bite.*"
+	s += "You take a bite.*";
 	s += " \n";
 	s += "*Three guys appear in front of you.*";
 	s += "Hey look at that! You won without using any cheats! Congrats man.\n";
 	s += "You get to keep that burger, and meet us devs. Not that that's much of a prize.";
-	s += "Well anyway good job. You got the spoooky seeecret endiing."
+	s += "Well anyway good job. You got the spoooky seeecret endiing.";
 
 	System.out.println(s);
     }
