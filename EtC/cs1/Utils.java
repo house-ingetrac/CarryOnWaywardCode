@@ -14,10 +14,11 @@ public class Utils{
     
     public static String readInput(){
 	InputStreamReader input = new InputStreamReader(System.in);
-	
+	return "";
 	}
 
     public static void readEnter(){
 	BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+	return "";
     }
 }
