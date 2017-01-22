@@ -56,6 +56,7 @@ public class Woo{
 	    s += "5. Quit\n";
 	    System.out.println(s);
 
+	    //can only play game before you beat the boss
 	    int result = Keyboard.readInt();
 	    if (result == 1 && Driverman.slotsKill == false){
 		Slotman.play();
@@ -82,6 +83,6 @@ public class Woo{
 		return;
 	}
 
-	System.out.println("GAME OVER");
+        Cutscenes.endingL();
     }
 }
