@@ -37,7 +37,7 @@ public class Slots extends Minigames{
 	    s += "4. Go Back\n";
 	    System.out.print(s);
 	    
-	    int response = Keyboard.readInt();
+	    int response = Utils.readInt();
 
 	    if (response == 4) return;
 
@@ -93,7 +93,6 @@ public class Slots extends Minigames{
 	}
 
 	else{
-	    
 	}
 	
 	int i = 0;
@@ -124,10 +123,14 @@ public class Slots extends Minigames{
     }
 
     private void bet(){
-        int holder = Keyboard.readInt();
+        int holder = Utils.readInt();
 	
 	if (holder > player.getMoney()){
 	    System.out.println("Amount greater than what you have on hand. Try again:");
+	    bet();
+	}
+	if (holder < 0){
+	    System.out.println("Nice try, but do it for real this time.");
 	    bet();
 	}
 

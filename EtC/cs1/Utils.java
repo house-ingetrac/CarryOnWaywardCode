@@ -8,17 +8,10 @@ public class Utils{
 	    System.out.println("Try again!");
 	    readInt();
 	}
-	else
+	else{
 	    return Keyboard.readInt();
-	    }
-    
-    public static String readInput(){
-	InputStreamReader input = new InputStreamReader(System.in);
-	return "";
 	}
-
-    public static void readEnter(){
-	BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
-	return "";
-    }
+    
+    public static void readInput(){
+	}
 }

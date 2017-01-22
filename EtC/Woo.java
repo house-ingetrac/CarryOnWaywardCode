@@ -19,6 +19,7 @@ public class Woo{
 	Woo Driverman = new Woo();
 	UserInterface Slotman = new Slots();
 	UserInterface Rouletteman = new Roulette();
+	UserInterface Blackjackman = new Blackjack();
 	Burger FS = new FutureSight(Driverman);
 	Burger ST = new SlowTime(Driverman);
 	Burger MH = new MagnetosHand(Driverman);
