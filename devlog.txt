@@ -87,9 +87,18 @@ Alessandro :: Implemented fights.
 <Member> :: <Thing member did.>
 <Member> :: <Thing member did.>
 ==============================================================
-yyyy-mm-dd
+
+2017-01-21
 --------------------------------------------------------------
+Alessandro :: Changed Driver to Woo, fixed related errors
+Elvin :: Added preliminary blackjack.
 <Member> :: <Thing member did.>
+==============================================================
+
+2017-01-22
+--------------------------------------------------------------
+Alessandro :: Implemented Magneto’s Hand.
 <Member> :: <Thing member did.>
 <Member> :: <Thing member did.>
 ==============================================================
+

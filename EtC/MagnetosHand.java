@@ -5,7 +5,7 @@ public class MagnetosHand extends Burger{
     }
 
     public boolean eat(){
-if (quantity > 0){
+	if (quantity > 0){
 	    quantity -= 1;
 	    System.out.println("Magneto's Hand activated!");
 	    return true;
