@@ -4,14 +4,13 @@ import java.util.*;
 
 public class Utils{
     public static int readInt(){
-        if ( Keyboard.readInt() == Integer.MIN_VALUE){
+	int data = Keyboard.readInt();
+        if ( data == Integer.MIN_VALUE ){
 	    System.out.println("Try again!");
-	    readInt();
+	    return Utils.readInt();
 	}
 	else{
-	    return Keyboard.readInt();
+	    return data;
 	}
-    
-    public static void readInput(){
-	}
+    }
 }

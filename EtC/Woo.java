@@ -17,12 +17,12 @@ public class Woo{
 
     public static void main(String[] args){
 	Woo Driverman = new Woo();
-	UserInterface Slotman = new Slots();
-	UserInterface Rouletteman = new Roulette();
-	UserInterface Blackjackman = new Blackjack();
 	Burger FS = new FutureSight(Driverman);
 	Burger ST = new SlowTime(Driverman);
 	Burger MH = new MagnetosHand(Driverman);
+	UserInterface Slotman = new Slots(Driverman, ST);
+	UserInterface Rouletteman = new Roulette();
+	//UserInterface Blackjackman = new Blackjack();
 	UserInterface Foodman = new FoodCourt(FS, ST, MH);
 
 	while (Driverman.money > 0){
@@ -59,21 +59,21 @@ public class Woo{
 
 	    //can only play game before you beat the boss
 	    int result = Keyboard.readInt();
-	    if (result == 1 && Driverman.slotsKill == false){
+	    if (result == 1 && ! Driverman.slotsKill){
 		Slotman.play();
 	    }
 	    else{
 		System.out.println("Already beat boss.");
 	    }
 
-	    if (result == 2 && Driverman.rouletteKill == false){
+	    if (result == 2 && ! Driverman.rouletteKill){
 		Rouletteman.play();
 	    }
 	    else{
 		System.out.println("Already beat boss.");
 	    }
-	    if (result == 3 && Driverman.blackjackKill == false){
-		Blackjackman.play();
+	    if (result == 3 && ! Driverman.blackjackKill){
+		//Blackjackman.play();
 	    }
 	    else{
 		System.out.println("Already beat boss.");

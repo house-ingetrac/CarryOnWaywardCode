@@ -9,6 +9,7 @@ public class Slots extends Minigames{
     private Woo player;
     private Burger ST;
     private boolean slow = false;
+    public boolean wall = true;
 
     public Slots(){
 	betAmount = 0;
@@ -77,28 +78,52 @@ public class Slots extends Minigames{
 
     private void pull(int index){
 	String s = "";
-	int start = 0;
+	int start = display[index];
 	int end = 0;
+	int x = 0;
 	
 	if (! slow){
-	    start = (int) (System.nanoTime() / Math.pow(10.0, 9.0));
+	    int help = (int) (System.nanoTime() / Math.pow(10.0, 9.0));
 	    s = "The images whirl by, your eye unable to catch them.\n";
 	    s += "Enter any key to pull the lever:";
 	    System.out.print(s);
 	    Keyboard.readString();
 
 	    System.out.println();
-	    end = ((int) (System.nanoTime() / Math.pow(10.0, 9.0))) - start;
+	    end = ((int) (System.nanoTime() / Math.pow(10.0, 9.0))) - help;
 	    System.out.println("You pull the lever, making one of the columns slow down before it comes to a halt:\n");
+	    x = 0;
 	}
 
 	else{
+	    s = "The world is tinged blue.\n";
+	    s += "The slot machine before you reveals its images before your eyes.\n";
+	    s += "Your hand reaches for the lever, waiting for just the right moment to pull:\n";
+	    System.out.println(s);
+
+	    x = 0;
+
+	    Thread input = new Thread(new SlotsHelper(this));
+	    input.start();
+	    while (wall) {
+		x += 1;
+		System.out.print(machine[index][(start + x) % 6] + " ");
+		try{
+		    Thread.sleep(500);
+		}
+		
+		catch(Exception e) { }
+
+		if (x % 5 == 0)
+		    System.out.println();
+	    }
+	    wall = true;
 	}
 	
 	int i = 0;
 	while (i < 10){
 	    i += 1;
-	    System.out.print(machine[index][(end + i) % 6] + " ");
+	    System.out.print(machine[index][(start + end + i + x) % 6] + " ");
 	    try{
 	    Thread.sleep(500);
 	    }
@@ -107,11 +132,11 @@ public class Slots extends Minigames{
 	
 	System.out.println();
 	System.out.println();
-	s = "You manage to pull a " + machine[index][(end + i) % 6]
+	s = "You manage to pull a " + machine[index][(start + end + i + x) % 6]
 	    + " in the " + (index + 1) + " slot!\n";
         System.out.println(s);
 
-	display[index] = (end + i) % 6;
+	display[index] = (start + end + i + x) % 6;
     }
 
     private void showDisplay(int lim){
