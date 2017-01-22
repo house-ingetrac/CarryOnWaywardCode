@@ -77,7 +77,7 @@ public class Blackjack extends Minigames{
 		
 		if (response1 == 1) {
 		    b = "You cut the deck, and the plastic insert card is placed.\n";
-		    System.out.print(b);
+		    System.out.println(b);
 		    System.out.println("You receive your two cards. They are:\n");
 		    System.out.println(firstTwo);
 		    Boolean stand = false;
@@ -85,7 +85,7 @@ public class Blackjack extends Minigames{
 			b = "1.Hit or 2. Stand?\n";
 			b += "1. Hit\n";
 			b += "2. Stand";
-			System.out.print(b);
+			System.out.println(b);
 
 			int response2 = Keyboard.readInt();
 
@@ -93,6 +93,8 @@ public class Blackjack extends Minigames{
 			    System.out.println("Your new card is:");
 			    showCard();
 			    totalCards += showCard();
+			    System.out.println("Your total is now: " + totalCards);
+				return;
 			}
 		    }
 		}
