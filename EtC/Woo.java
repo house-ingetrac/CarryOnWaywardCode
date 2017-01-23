@@ -62,20 +62,20 @@ public class Woo{
 	    if (result == 1 && ! Driverman.slotsKill){
 		Slotman.play();
 	    }
-	    else{
+	    else if (result == 1){
 		System.out.println("Already beat boss.");
 	    }
 
 	    if (result == 2 && ! Driverman.rouletteKill){
 		Rouletteman.play();
 	    }
-	    else{
+	    else if (result == 2){
 		System.out.println("Already beat boss.");
 	    }
 	    if (result == 3 && ! Driverman.blackjackKill){
 		//Blackjackman.play();
 	    }
-	    else{
+	    else if (result == 3){
 		System.out.println("Already beat boss.");
 	    }
 	    if (result == 4)
