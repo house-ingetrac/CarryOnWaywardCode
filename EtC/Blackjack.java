@@ -54,6 +54,11 @@ public class Blackjack extends Minigames{
 	    if (response == 2){
 		eatBurger();
 	    }
+
+	    if (response == 3){
+		RPGBattle();
+		return;
+	    }
 	    
 	    if (response == 1){
 	        s = "Place your bet!\n";
@@ -133,10 +138,7 @@ public class Blackjack extends Minigames{
 		    dealerHand = 50;
 		}
 		
-		if (response == 3){
-		    RPGBattle();
-		    return;
-		}
+		
 	    }
 	}
     }
@@ -256,7 +258,7 @@ public class Blackjack extends Minigames{
 	    System.out.println("You load your gun with chips and start shooting at the dealer.");
 	    
 	    if(player.getMoney() > 150){
-		player.rouletteKill = true;
+		player.blackjackKill = true;
 		String msgW = "";
 		msgW += "Your shots collide at quasi-relativistic speeds (5 m/s) with the dealer.\n";
 		msgW += "He falls to the floor, unconscious, and you leave victorious.";
