@@ -12,12 +12,14 @@ public class Roulette extends Minigames{
 	betAmount = 0;
 	multiplier = 1;
 	player = new Woo();
+	MH = new MagnetosHand(player);
     }
     
-    public Roulette(Woo playman){
+    public Roulette(Woo playman, Burger mh){
 	betAmount = 0;
 	multiplier = 1;
 	player = playman;
+	MH = mh;
     }
 
     public void play(){
