@@ -39,8 +39,7 @@ public class Blackjack extends Minigames{
     }
 
     public void play() {
-	Collections.shuffle(combination);
-	
+	Collections.shuffle(combination);	
 	while (true) {
 	    if (player.getMoney() <= 0){
 		System.out.println("You've run out of money!");
@@ -78,6 +77,7 @@ public class Blackjack extends Minigames{
 		    System.out.print(b);
 		    System.out.println("You receive your two cards. They are:\n");
 		    System.out.println(firstTwo);
+		    totalCards = convertComb(
 		    Boolean stand = false;
 		    while (totalCards <= 21 || stand == true) {
 			b = "1.Hit or 2. Stand?\n";
@@ -125,11 +125,21 @@ public class Blackjack extends Minigames{
         return combination.get(counter);
     }
 
-    private void convertComb() {
-	for (i : combination) {
-	    if (i.substring(0,1) > 0 && (i.substring(0,1) < 10))//checks if it is number card
-		int valueOf = i.substring(0,1);
-	    if (i == "King"
+		    private int convertComb(ArrayList combination) {
+			for (i : combination) {
+			    if (i.substring(0,1) > 0 && (i.substring(0,1) < 10))
+				return i.substring(0,1);
+			    if (i.substring(0,1) = "J") {
+				return 10;
+				if (i.substring(0,1) = "Q")
+				    return 10;
+				if (i.substring(0,1) = "K")
+				    return 10;
+				if (i.substring(0,1) = "A") {
+				}
+			    }
+			}
+		    }
        private void bet(){
         int holder = Keyboard.readInt();
 	
