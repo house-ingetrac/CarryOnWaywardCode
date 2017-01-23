@@ -1,10 +1,11 @@
 import cs1.Keyboard;
 public class Woo{
-    private int money = 100;
+    public int money = 100;
 
     public boolean slotsKill = false;
     public boolean rouletteKill = false;
     public boolean blackjackKill = false;
+    
     private int counter = 0;
 
     //amount can be negative
@@ -26,6 +27,11 @@ public class Woo{
 	//UserInterface Blackjackman = new Blackjack();
 	UserInterface Foodman = new FoodCourt(FS, ST, MH);
 
+	if(Driverman.money <= 0){
+	    Cutscenes.endingL();
+	    return;
+	}
+	
 	while (Driverman.money > 0){
 	    String ascii = " \n";
 	    ascii += "         Welcome To:\n";
@@ -46,13 +52,14 @@ public class Woo{
 	    ascii += "  |                 ||    |\n";
 	    ascii += " \n";
 	    
-	    if(counter == 0){
+	    if(Driverman.counter == 0){
 		System.out.println(ascii);
 	    }
 
-	    String s = "Welcome to Escape the Casino!\n";
-	    s += "\n";
-	    s += "Your money is currently " + Driverman.money + "\n";
+	    if(Driverman.counter == 0){
+		System.out.print("Welcome to Escape the Casino!\nYou start with $100");
+	    }
+	    String s = "\n";
 	    s += "Please choose from the following selection:\n";
 	    s += "1. Slots\n";
 	    s += "2. Roulette\n";
@@ -65,7 +72,7 @@ public class Woo{
 	    int result = Keyboard.readInt();
 	    if (result == 1 && ! Driverman.slotsKill){
 		Slotman.play();
-		counter += 1;
+		Driverman.counter += 1;
 	    }
 	    else if (result == 1){
 		System.out.println("Already beat boss.");
@@ -74,7 +81,7 @@ public class Woo{
 
 	    if (result == 2 && ! Driverman.rouletteKill){
 		Rouletteman.play();
-		counter += 1;
+		Driverman.counter += 1;
 	    }
 	    else if (result == 2){
 		System.out.println("Already beat boss.");
@@ -83,7 +90,7 @@ public class Woo{
 	    
 	    if (result == 3 && ! Driverman.blackjackKill){
 		//Blackjackman.play();
-		counter += 1;
+		Driverman.counter += 1;
 	        
 	    }
 	    else if (result == 3){
@@ -96,7 +103,6 @@ public class Woo{
 	    if (result == 5)
 		return;
 	}
-
-        Cutscenes.endingL();
+	
     }
 }

@@ -25,6 +25,7 @@ public class Roulette extends Minigames{
 	while (true){
 	    if (player.getMoney() <= 0){
 		System.out.println("You've run out of money!");
+		return;
 	    }
 	    
 	    String s = "Welcome to Roulette!\n";
@@ -94,7 +95,6 @@ public class Roulette extends Minigames{
 		}
 		else{
 		    winType = 0;
-		    System.out.println("Sorry, you lose. Try again.");
 		}
 	    }
 	}
