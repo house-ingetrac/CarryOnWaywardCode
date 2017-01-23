@@ -19,7 +19,7 @@ public class Woo{
 	return money;
     }
 
-    public boolean aK(){
+    public void aK(){
 	if(slotsKill == true && rouletteKill == true && blackjackKill == true){
 	    allKill = true;
 	}
