@@ -21,25 +21,23 @@ Flesh out each category whenever necessary, appropriate.
 ------------------------------------------
 OBSTACLES OVERCOME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-wow we so BOSS bc...
+Throughout coding, we encountered several obstacles. One obstacle was in Blackjack, where we needed to create an ArrayList of cards that was descriptive, while assigning each object an integer value. This was crucial for Blackjack to function, as the cards needed values to determine whether the total cards amounted to more or less than, or equal to, 21. We overcame this obstacle by creating a method that would convert the card only when necessary. Essentially, we did not assign permanent integer values to the cards, but instead devised a method that would give it its proper value on the spot. 
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-blah blah pesky bug...
-maybe some of these will move into the Obs.Ovrcm section...
+There were some glitches that occurred when the game was tested thoroughly. For example, at one point the games would always exit after beating them. These issues only happened in certain scenarios of a play-through, and a basic run could be completed without bugs.
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-wow! oo!...
+This project relied heavily on efficient usage of Github’s resources. Through this experience, we have learned new commands and shortcuts in terminal about git that helped us maximize efficiency.
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-we changed ___ to ___ bc...
+No design changes were really made throughout development.
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tales of wisdom gained...
-||||||||||||||||||||||||||||||||||||||||||
+Seemingly miniscule and mundane games such as Blackjack are not as easy to code as one thinks.
 
 
 
