@@ -26,11 +26,6 @@ public class Woo{
 	UserInterface Rouletteman = new Roulette();
 	//UserInterface Blackjackman = new Blackjack();
 	UserInterface Foodman = new FoodCourt(FS, ST, MH);
-
-	if(Driverman.money <= 0){
-	    Cutscenes.endingL();
-	    return;
-	}
 	
 	while (Driverman.money > 0){
 	    String ascii = " \n";
@@ -103,6 +98,9 @@ public class Woo{
 	    if (result == 5)
 		return;
 	}
+
+	Cutscenes.endingL();
+	    return;
 	
     }
 }
