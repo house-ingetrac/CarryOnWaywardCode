@@ -74,6 +74,7 @@ public class Roulette extends Minigames{
 	
 	if(magnet == true){ //checks if you ate the burger
 	    winType = (int)((Math.random() * 3) + 1); //gives you a random guaranteed win if true
+	    magnet = false;
 	}
 	else{ //normal random win/lose if false
 	    if(betOn == 0 && (result == 0 || result == 40)){
