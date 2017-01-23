@@ -9,7 +9,7 @@ public class Cutscenes{
 	s += "On the table next to you you will find a ChipGun, which shoots our proprietary chips. \n";
 	s += "There are several games for you to enjoy as well as a food court. \n";
 	s += "I assure you that you have never had burgers quite like these ones. \n";
-	s +- "You will need to defeat the employees in order to escape. Good luck! \n";
+	s += "You will need to defeat the employees in order to escape. Good luck! \n";
 
 	System.out.println(s);
     }
