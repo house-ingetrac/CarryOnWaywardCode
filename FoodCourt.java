@@ -11,6 +11,10 @@ public class FoodCourt implements UserInterface{
 	MH = mh;
     }
 
+    public void burgerBuy(){
+	Woo.burgerBought += 1;
+    }
+    
     public void play(){
 	while (true){
 	    String s = "Ayy waddup\n";
@@ -22,17 +26,20 @@ public class FoodCourt implements UserInterface{
 	    int response = Utils.readInt();
 
 	    if (response == 1){
+		burgerBuy();
 		System.out.println("How many?");
 		int quan = Utils.readInt();
 		FS.buy(quan);
 	    }
 	    else if (response == 2){
+		burgerBuy();
 		System.out.println("How many?");
 		int quan = Utils.readInt();
 		ST.buy(quan);
 	    }
 	    
 	    else if (response == 3){
+		burgerBuy();
 		System.out.println("How many?");
 		int quan = Utils.readInt();
 		MH.buy(quan);

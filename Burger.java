@@ -1,21 +1,21 @@
 public abstract class Burger{
     protected int quantity;
-    protected Driver player;
+    protected Woo player;
     protected int price;
     
     public Burger(){
 	quantity = 0;
-	player = new Driver();
+	player = new Woo();
 	price = 0;
     }
 
-    public Burger(Driver playperson){
+    public Burger(Woo playperson){
 	quantity = 0;
 	player = playperson;
 	price = 0;
     }
 
-    public abstract void eat();
+    public abstract boolean eat();
 
     public void buy(int qua){
 	if (player.getMoney() < (price * qua)){
