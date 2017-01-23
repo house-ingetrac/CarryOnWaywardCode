@@ -5,32 +5,29 @@ import java.util.ArrayList;
 public class Blackjack extends Minigames{
     private int counter = 2;
     private Woo player;
-    private String[] suits = { "of diamonds", "of clubs", "of hearts", "of spades"};
+    private String[] suits = { " of diamonds", " of clubs", " of hearts", " of spades"};
     ArrayList combination = new ArrayList();
-    int totalCards;
-    String firstTwo;
-    String addedCards;
+    int playerHand = 1;
+    int dealerHand = 50;
     
     public Blackjack() {
 	betAmount = 0;
 	multiplier = 1;
 	player = new Woo();
-	totalCards = 0;
     }
     public Blackjack(Woo playman){
 	betAmount = 0;
 	multiplier = 1;
-	totalCards = 0;
 	player = playman;
-	firstTwo = combination.get(0) + " and " + combination.get(1);
 	for(String suit: suits) {
-	    for (int i = 0; i <= 10; i++) {
+	    for (int i = 2; i <= 10; i++) {
 		combination.add(i+suit);
-		combination.add("Jack " + suit);
-		combination.add("Queen " + suit);
-		combination.add("King " + suit);
-		combination.add("Ace " + suit); //for now, ace = 1;	
 	    }
+	    combination.add("Jack " + suit);
+	    combination.add("Queen " + suit);
+	    combination.add("King " + suit);
+	    combination.add("Ace " + suit); //for now, ace = 1;	
+	    
 	}
     }
 
@@ -40,6 +37,7 @@ public class Blackjack extends Minigames{
 	while (true) {
 	    if (player.getMoney() <= 0){
 		System.out.println("You've run out of money!");
+		return;
 	    }
 
 	    String s = "Welcome to Blackjack!\n";
@@ -65,7 +63,7 @@ public class Blackjack extends Minigames{
 		String b = "The dealer shuffles the deck. He hands it to you to cut.\n";
 		b += "1. Cut the deck\n";
 		b += "2. Take the cards and use it as a weapon against the dealer.\n";
-		System.out.print(s);
+		System.out.print(b);
 		
 		int response1 = Keyboard.readInt();
 		
@@ -79,24 +77,61 @@ public class Blackjack extends Minigames{
 		    b = "You cut the deck, and the plastic insert card is placed.\n";
 		    System.out.println(b);
 		    System.out.println("You receive your two cards. They are:\n");
-		    System.out.println(firstTwo);
+		    readHand();
+		    System.out.println();
+		    System.out.println("The Dealer's hand is:\n");
+		    System.out.println(combination.get(51) + " and a card face-down\n");
+		    
 		    Boolean stand = false;
-		    while (totalCards <= 21 || stand == true) {
-			b = "1.Hit or 2. Stand?\n";
-			b += "1. Hit\n";
+		    while (readComb() <= 21 && (! stand)) {
+			b = "1. Hit\n";
 			b += "2. Stand";
 			System.out.println(b);
 
 			int response2 = Keyboard.readInt();
 
 			if (response2 == 1) {
-			    System.out.println("Your new card is:");
-			    showCard();
-			    totalCards += showCard();
-			    System.out.println("Your total is now: " + totalCards);
-				return;
+			    playerHand += 1;
+			    System.out.println("You recieve a " + combination.get(playerHand));
+			    System.out.println();
+			    System.out.println("Your hand is now:");
+			    readHand();
+			}
+
+			if (response2 == 2){
+			    stand = true;
 			}
 		    }
+
+		    if (stand){
+			System.out.println("The Dealer flips over his face-down card.");
+			System.out.println("The Dealer's hand is:");
+			readDHand();
+
+			while(readDealer() < readComb()){
+			    dealerHand -= 1;
+			    System.out.println("The Dealer draws a new card: " + combination.get(playerHand));
+			    System.out.println("His hand is now:");
+			    readDHand();
+			}
+
+			if (readDealer() > 21){
+			    System.out.println("You win!");
+			    System.out.println("You earn $" + (betAmount * 2) + "!");
+			    player.alterMoney( (betAmount * 2) );
+			}
+
+			else{
+			    System.out.println("You lose! Try again!");
+			}
+		    }
+
+		    else{
+			System.out.println("You lose! Try again!");
+		    }
+
+		    playerHand = 1;
+		    dealerHand = 50;
 		}
 		
 		if (response == 3){
@@ -113,18 +148,88 @@ public class Blackjack extends Minigames{
 	firstTwo = combination.get(0) + " and " + combination.get(1));
 	}*/
 
-      private int showCard() {
-        return combination.get(counter);
-	counter += 1;
+    private void readHand() {
+        for (int i = 0; i <= playerHand; i ++){
+	    System.out.print(combination.get(i) + " | ");
+	}
+	System.out.println();
     }
 
-    private void readComb() {
-	int valueOf = 0;
-	for (int i : combination) {
-	    if (i.substring(0,1) > 0 && (i.substring(0,1) < 10))
-		valueOf = i.substring(0,1);
-	    if (i == "King"){}
+    private int readComb() {
+        int value = 0;
+        int aces = 0;
+	for (int i = 0; i <= playerHand; i ++) {
+	    try{
+		value += Integer.parseInt(((String) combination.get(i)).substring(0,1));
+	    }
+	    catch(Exception e){
+		if (((String) combination.get(i)).substring(0,1).equals("K"))
+		    value += 10;
+		if (((String) combination.get(i)).substring(0,1).equals( "Q"))
+		    value += 10;
+		if (((String) combination.get(i)).substring(0,1).equals( "J"))
+		    value += 10;
+		if (((String) combination.get(i)).substring(0,1).equals( "A"))
+		    aces += 1;
+	    }
+	    if (((String) combination.get(i)).substring(0,1).equals("1"))
+		value += 9;
 	}
+
+        while (aces > 0){
+	    if ((value + 11) <= 21){
+		value += 11;
+		aces -= 1;
+	    }
+	    else{
+		value += 1;
+		aces -= 1;
+	    }
+	}
+
+	return value;
+    }
+
+    private int readDealer(){
+	int value = 0;
+        int aces = 0;
+	for (int i = 51; i >= dealerHand; i --) {
+	    try{
+		value += Integer.parseInt(((String) combination.get(i)).substring(0,1));
+	    }
+	    catch(Exception e){
+		if (((String) combination.get(i)).substring(0,1).equals("K"))
+		    value += 10;
+		if (((String) combination.get(i)).substring(0,1).equals( "Q"))
+		    value += 10;
+		if (((String) combination.get(i)).substring(0,1).equals( "J"))
+		    value += 10;
+		if (((String) combination.get(i)).substring(0,1).equals( "A"))
+		    aces += 1;
+	    }
+	    if (((String) combination.get(i)).substring(0,1).equals("1"))
+		value += 9;
+	}
+
+        while (aces > 0){
+	    if ((value + 11) <= 21){
+		value += 11;
+		aces -= 1;
+	    }
+	    else{
+		value += 1;
+		aces -= 1;
+	    }
+	}
+
+	return value;
+    }
+
+    private void readDHand(){
+	for (int i = 51; i >= dealerHand; i --){
+	    System.out.print(combination.get(i) + " | ");
+	}
+	System.out.println();
     }
 
     private void bet(){

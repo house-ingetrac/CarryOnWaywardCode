@@ -1,6 +1,6 @@
 import cs1.Keyboard;
 public class Woo{
-    public int money = 100;
+    private int money = 100;
 
     public boolean slotsKill = false;
     public boolean rouletteKill = false;
@@ -32,7 +32,7 @@ public class Woo{
 	Burger MH = new MagnetosHand(Driverman);
 	UserInterface Slotman = new Slots(Driverman, ST);
 	UserInterface Rouletteman = new Roulette(Driverman);
-	//UserInterface Blackjackman = new Blackjack();
+	UserInterface Blackjackman = new Blackjack(Driverman);
 	UserInterface Foodman = new FoodCourt(FS, ST, MH);
 
 	Driverman.aK();
@@ -99,7 +99,7 @@ public class Woo{
 	    }
 	    
 	    if (result == 3 && ! Driverman.blackjackKill){
-		//Blackjackman.play();
+		Blackjackman.play();
 		Driverman.counter += 1;
 	        
 	    }
