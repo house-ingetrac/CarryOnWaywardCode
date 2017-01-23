@@ -122,8 +122,8 @@ public class Slots extends Minigames{
 	
 	int i = 0;
 	while (i < 10){
-	    i += 1;
 	    System.out.print(machine[index][(start + end + i + x) % 6] + " ");
+	    i += 1;
 	    try{
 	    Thread.sleep(500);
 	    }
