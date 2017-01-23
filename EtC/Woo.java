@@ -6,7 +6,7 @@ public class Woo{
     public boolean rouletteKill = false;
     public boolean blackjackKill = false;
     public boolean allKill = false;
-    public int burgerBought = 0;
+    public static int burgerBought = 0;
     
     private int counter = 0;
 
@@ -18,13 +18,17 @@ public class Woo{
     public int getMoney(){
 	return money;
     }
-
+    
     public void aK(){
-	if(slotsKill == true && rouletteKill == true && blackjackKill == true){
+	if (slotsKill == true && rouletteKill == true && blackjackKill == true){
 	    allKill = true;
-	}
+	}//checks if all bosses defeated
     }
 
+    public void counterAdd(){
+	counter += 1;
+    }
+    
     public static void main(String[] args){
 	Woo Driverman = new Woo();
 	Burger FS = new FutureSight(Driverman);
@@ -34,10 +38,11 @@ public class Woo{
 	UserInterface Rouletteman = new Roulette(Driverman, MH);
 	UserInterface Blackjackman = new Blackjack(Driverman);
 	UserInterface Foodman = new FoodCourt(FS, ST, MH);
-
-	Driverman.aK();
+	
 	
 	while (Driverman.getMoney() > 0 && (! Driverman.allKill)){
+
+	    Driverman.aK();
 	    
 	    if(Driverman.counter == 0){
 		Cutscenes.start();
@@ -76,7 +81,8 @@ public class Woo{
 	    s += "2. Roulette\n";
 	    s += "3. BlackJack\n";
 	    s += "4. Food Court\n";
-	    s += "5. Quit\n";
+	    s += "5. Attempt Escape\n";
+	    s += "6. Quit\n";
 	    System.out.println(s);
 
 	    //can only play game before you beat the boss
@@ -87,7 +93,6 @@ public class Woo{
 	    }
 	    else if (result == 1){
 		System.out.println("Already beat boss.");
-		return;
 	    }
 
 	    if (result == 2 && ! Driverman.rouletteKill){
@@ -96,7 +101,6 @@ public class Woo{
 	    }
 	    else if (result == 2){
 		System.out.println("Already beat boss.");
-		return;
 	    }
 	    
 	    if (result == 3 && ! Driverman.blackjackKill){
@@ -106,12 +110,21 @@ public class Woo{
 	    }
 	    else if (result == 3){
 		System.out.println("Already beat boss.");
-		return;
 	    }
 	    
-	    if (result == 4)
+	    if (result == 4){
+		Driverman.counterAdd();
 	        Foodman.play();
-	    if (result == 5)
+	    }
+
+	    if (result == 5){
+		Driverman.counterAdd();
+		if(! Driverman.allKill){
+		    System.out.println("Not yet sir.");
+		}
+	    }
+	    
+	    if (result == 6)
 		return;
 	}
 
