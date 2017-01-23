@@ -31,13 +31,13 @@ public class Woo{
 	Burger ST = new SlowTime(Driverman);
 	Burger MH = new MagnetosHand(Driverman);
 	UserInterface Slotman = new Slots(Driverman, ST);
-	UserInterface Rouletteman = new Roulette();
+	UserInterface Rouletteman = new Roulette(Driverman);
 	//UserInterface Blackjackman = new Blackjack();
 	UserInterface Foodman = new FoodCourt(FS, ST, MH);
 
 	Driverman.aK();
 	
-	while (Driverman.money > 0 && ! Driverman.allKill){
+	while (Driverman.getMoney() > 0 && (! Driverman.allKill)){
 	    
 	//opening cutscene
 	//to be added
