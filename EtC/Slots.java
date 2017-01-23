@@ -2,14 +2,16 @@ import cs1.Keyboard;
 import cs1.Utils;
 
 public class Slots extends Minigames{
+    //instance variables
     private final String[][] machine = { {"7", "cherry", "pear", "zebra", "unicorn", "piccolo"},
 				   {"7", "cherry", "pear", "zebra", "unicorn", "piccolo"},
 				   {"7", "cherry", "pear", "zebra", "unicorn", "piccolo"}, };
     private int[] display = new int[3];
-    private Woo player;
-    private Burger ST;
-    private boolean slow = false;
-    public boolean wall = true;
+    
+    private Woo player;// for money
+    private Burger ST; //for SlowTime
+    private boolean slow = false; //for SlowTime
+    public boolean wall = true; //for SlowTime
 
     public Slots(){
 	betAmount = 0;
@@ -25,6 +27,9 @@ public class Slots extends Minigames{
 	ST = st;
     }
 
+    /* To be invoked in Woo.
+       Private methods built on top of this method which can be returned to 
+    get back into Woo -- the main hub. */
     public void play(){
 	while (true){
 	    if (player.getMoney() <= 0){
@@ -54,7 +59,8 @@ public class Slots extends Minigames{
 		System.out.println("You look at the slot machine. It currently reads:");
 		showDisplay(2);
 
-		
+		/*goes through the  three indexes of machine using display to indicate
+		  which image is currently active*/
 		for (int i = 0; i < 3; i++){
 		    System.out.print("Enter any key to pull the lever:");
 		    Keyboard.readString();
@@ -122,8 +128,8 @@ public class Slots extends Minigames{
 	
 	int i = 0;
 	while (i < 10){
-	    i += 1;
 	    System.out.print(machine[index][(start + end + i + x) % 6] + " ");
+	    i += 1;
 	    try{
 	    Thread.sleep(500);
 	    }

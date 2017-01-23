@@ -67,7 +67,7 @@ public class Woo{
 		Slotman.play();
 		counter += 1;
 	    }
-	    else{
+	    else if (result == 1){
 		System.out.println("Already beat boss.");
 		return;
 	    }
@@ -76,7 +76,7 @@ public class Woo{
 		Rouletteman.play();
 		counter += 1;
 	    }
-	    else{
+	    else if (result == 2){
 		System.out.println("Already beat boss.");
 		return;
 	    }
@@ -86,7 +86,7 @@ public class Woo{
 		counter += 1;
 	        
 	    }
-	    else{
+	    else if (result == 3){
 		System.out.println("Already beat boss.");
 		return;
 	    }
