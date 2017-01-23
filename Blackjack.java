@@ -3,21 +3,25 @@ import java.util.Collections;
 import java.util.ArrayList;
 
 public class Blackjack extends Minigames{
-    private int counter = 2;
-    private Woo player;
+    private int counter;
+    private Driver player;
     private String[] suits = { "of diamonds", "of clubs", "of hearts", "of spades"};
     ArrayList combination = new ArrayList();
     int totalCards;
     String firstTwo;
     String addedCards;
+
     
     public Blackjack() {
+	counter = 2;
 	betAmount = 0;
 	multiplier = 1;
-	player = new Woo();
+	player = new Driver();
 	totalCards = 0;
+	counter = 0;
     }
-    public Blackjack(Woo playman){
+    public Blackjack(Driver playman){
+	counter = 2;
 	betAmount = 0;
 	multiplier = 1;
 	totalCards = 0;
@@ -85,14 +89,31 @@ public class Blackjack extends Minigames{
 
 			if (response2 == 1) {
 			    System.out.println("Your new card is:");
-			    showCard();
-			    totalCards += showCard();
+			    showCard(counter);
+			    totalCards += showCard(counter);//delete later
+			    counter += 1;
+			}
+			if (response2 == 2) {
+			    System.out.println("You chose to stand.");
+			    stand = true;
 			}
 		    }
+		    if (totalCards >= 21) {
+			System.out.println("You have exceeded twenty one. Game over.\n");
+			System.out.println("You have lost: " + betAmount);
+		    }
+		  
+		    if (stand == true) {
+			if (Math.random < .5) {
+			    System.out.println("The dealer plays. His card values amount to more than yours.\n");
+			    System.out.println("You have lost: " + betAmount);    
+			    else {
+				System.out.println("The dealer plays. His card values amount to less than yours.\n");
+				System.out.println("You have won: " + betAmount);
 		}
 	    }
 	}
-    }
+	
 				
 
 
@@ -100,14 +121,13 @@ public class Blackjack extends Minigames{
 	firstTwo = combination.get(0) + " and " + combination.get(1));
 	}*/
 
-      private int showCard() {
+      private int showCard(counter) {
         return combination.get(counter);
-	counter += 1;
     }
 
-    private void readComb() {
+    private void convertComb() {
 	for (i : combination) {
-	    if (i.substring(0,1) > 0 && (i.substring(0,1) < 10))
+	    if (i.substring(0,1) > 0 && (i.substring(0,1) < 10))//checks if it is number card
 		int valueOf = i.substring(0,1);
 	    if (i == "King"
        private void bet(){
@@ -125,4 +145,4 @@ public class Blackjack extends Minigames{
 	}
     }
    
-}
+      
