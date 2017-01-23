@@ -5,6 +5,7 @@ public class Woo{
     public boolean slotsKill = false;
     public boolean rouletteKill = false;
     public boolean blackjackKill = false;
+    private int counter = 0;
 
     //amount can be negative
     public void alterMoney(int amount){
@@ -44,10 +45,13 @@ public class Woo{
 	    ascii += "  |      LUCKY SEVEN /    |\n";
 	    ascii += "  |                 ||    |\n";
 	    ascii += " \n";
-	    System.out.println(ascii);
+	    
+	    if(counter == 0){
+		System.out.println(ascii);
+	    }
 
-	    String s = "Welcome to Escape the Casino's MVP!\n";
-	    s += "(So basically just a Casino)\n";
+	    String s = "Welcome to Escape the Casino!\n";
+	    s += "\n";
 	    s += "Your money is currently " + Driverman.money + "\n";
 	    s += "Please choose from the following selection:\n";
 	    s += "1. Slots\n";
@@ -61,23 +65,32 @@ public class Woo{
 	    int result = Keyboard.readInt();
 	    if (result == 1 && ! Driverman.slotsKill){
 		Slotman.play();
+		counter += 1;
 	    }
 	    else{
 		System.out.println("Already beat boss.");
+		return;
 	    }
 
 	    if (result == 2 && ! Driverman.rouletteKill){
 		Rouletteman.play();
+		counter += 1;
 	    }
 	    else{
 		System.out.println("Already beat boss.");
+		return;
 	    }
+	    
 	    if (result == 3 && ! Driverman.blackjackKill){
 		//Blackjackman.play();
+		counter += 1;
+	        
 	    }
 	    else{
 		System.out.println("Already beat boss.");
+		return;
 	    }
+	    
 	    if (result == 4)
 	        Foodman.play();
 	    if (result == 5)

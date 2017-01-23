@@ -28,6 +28,7 @@ public class Roulette extends Minigames{
 	    }
 	    
 	    String s = "Welcome to Roulette!\n";
+	    s += "You have $" + player.getMoney() + "\n";
 	    s += "1. Play Game\n";
 	    s += "2. Eat Burger\n";
 	    s += "3. Fight dealer\n";
