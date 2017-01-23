@@ -39,8 +39,9 @@ public class Woo{
 	
 	while (Driverman.getMoney() > 0 && (! Driverman.allKill)){
 	    
-	//opening cutscene
-	//to be added
+	    if(Driverman.counter == 0){
+		Cutscenes.start();
+	    }
 	
 	//main game
 	    String ascii = " \n";

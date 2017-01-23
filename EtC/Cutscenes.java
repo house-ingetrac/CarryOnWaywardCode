@@ -1,4 +1,18 @@
 public class Cutscenes{
+
+    public static void start(){
+	String s = "";
+	s += "You awake in a dark casino. The lights fliker on and you hear a voice over the loudspeaker: \n";
+	s += "Hello, and welcome to the Lucky Sevens Casino. We have kidnapped you for no reason whatsoever. \n";
+	s += "It is up to you to escape. How exciting! \n";
+	s += "Because we have no intention of harming you, we have even given you a tool to help you. \n";
+	s += "On the table next to you you will find a ChipGun, which shoots our proprietary chips. \n";
+	s += "There are several games for you to enjoy as well as a food court. \n";
+	s += "I assure you that you have never had burgers quite like these ones. \n";
+	s +- "You will need to defeat the employees in order to escape. Good luck! \n";
+
+	System.out.println(s);
+    }
     
     public static void endingW(){
 	String s = "";
