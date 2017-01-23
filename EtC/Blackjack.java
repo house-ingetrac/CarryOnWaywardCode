@@ -279,7 +279,12 @@ public class Blackjack extends Minigames{
     }
 
     private void eatBurger(){
-	//not yet implemented
+	System.out.println("You eat the burger, and you are enlightened. You envision the future cards.");
+	System.out.print(combination.get(0));
+	System.out.print(combination.get(51));
+	System.out.print(combination.get(1));
+	System.out.print(combination.get(50));
+	System.out.print(combination.get(2));
     }
     
 	
