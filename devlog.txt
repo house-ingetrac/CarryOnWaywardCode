@@ -29,11 +29,11 @@ There were some glitches that occurred when the game was tested thoroughly. For 
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-This project relied heavily on efficient usage of Github’s resources. Through this experience, we have learned new commands and shortcuts in terminal about git that helped us maximize efficiency.
+This project relied heavily on efficient usage of Github’s resources. Through this experience, we have learned new commands and shortcuts in terminal about git that helped us maximize efficiency. For the implementation of Slots and Blackjack, classes such as Thread and Collections were used, of which the java api was especially useful.
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-No design changes were really made throughout development.
+No major design changes were really made throughout development. One minor occurance was the creation of an additional class -- SlotsHelper to aid in the multi-threading used in Slot's implementation.
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -83,20 +83,20 @@ Ricky :: Worked on SlowTime implementation.
 --------------------------------------------------------------
 Alessandro :: Implemented fights.
 <Member> :: <Thing member did.>
-<Member> :: <Thing member did.>
+Ricky :: Developed SlowTime.
 ==============================================================
 
 2017-01-21
 --------------------------------------------------------------
 Alessandro :: Changed Driver to Woo, fixed related errors
 Elvin :: Added preliminary blackjack.
-<Member> :: <Thing member did.>
+Ricky :: Developed SlowTime.
 ==============================================================
 
 2017-01-22
 --------------------------------------------------------------
 Alessandro :: Implemented Magneto’s Hand.
 <Member> :: <Thing member did.>
-<Member> :: <Thing member did.>
+Ricky :: Implemented SlowTime and various oddjobs to finish the project.
 ==============================================================
 
