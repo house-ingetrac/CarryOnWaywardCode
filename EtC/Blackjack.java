@@ -68,9 +68,8 @@ public class Blackjack extends Minigames{
 		int response1 = Keyboard.readInt();
 		
 		if (response1 == 2) {
-		    b = "Just kidding. That's probably a bad idea.\n";
-		    System.out.print(s);
-		    return;
+		    System.out.println("Just kidding. That's probably a bad idea.\n");
+		    player.alterMoney(betAmount);
 		}
 		
 		if (response1 == 1) {
@@ -142,11 +141,6 @@ public class Blackjack extends Minigames{
 	}
     }
 				
-
-
-    /* private int showCards() {
-	firstTwo = combination.get(0) + " and " + combination.get(1));
-	}*/
 
     private void readHand() {
         for (int i = 0; i <= playerHand; i ++){
@@ -280,11 +274,11 @@ public class Blackjack extends Minigames{
 
     private void eatBurger(){
 	System.out.println("You eat the burger, and you are enlightened. You envision the future cards.");
-	System.out.print(combination.get(0));
-	System.out.print(combination.get(51));
-	System.out.print(combination.get(1));
-	System.out.print(combination.get(50));
-	System.out.print(combination.get(2));
+	System.out.println(combination.get(0) + " ");
+	System.out.print(combination.get(51) + " ");
+	System.out.print(combination.get(1) + " ");
+	System.out.print(combination.get(50) + " ");
+	System.out.print(combination.get(2) + " \n");
     }
     
 	

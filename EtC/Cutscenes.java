@@ -2,7 +2,7 @@ public class Cutscenes{
     
     public static void endingW(){
 	String s = "";
-	s += "You have defeated my henchmen, and I can retain you here no longer.\n";
+	s += "You have defeated my henchmen, and I can retain you here no longer. \n";
 	s += "Have a nice day, and thank you for coming to the Lucky Sevens Casino.\n";
 	s += " \n";
 	s += "YOU WIN";
@@ -16,7 +16,7 @@ public class Cutscenes{
     public static void endingL(){
 	String s = "";
 	s += "It appears that you have run out of money.\n";
-	s += "Please allow my henchmen to accompany you back to your ce- room.";
+	s += "Please allow my henchmen to accompany you back to your ce- room. ";
 	s += "Have a nice day, and thank you for your continued stay at the Lucky Sevens Casino.\n";
 	s += " \n";
 	s += "YOU LOSE";
@@ -26,7 +26,7 @@ public class Cutscenes{
 
     public static void endingB(){
 	String s = "";
-	s += "You have defeated my henchmen, and I can retain you here no longer.\n";
+	s += "You have defeated my henchmen, and I can retain you here no longer. \n";
 	s += "Have a nice day, and thank you for coming to the Lucky Sevens Casino.\n";
 	s += " \n";
 	s += "YOU WIN";
