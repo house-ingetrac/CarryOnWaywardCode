@@ -39,6 +39,10 @@ public class Woo{
 	
 	while (Driverman.money > 0 && ! Driverman.allKill){
 	    
+	//opening cutscene
+	//to be added
+	
+	//main game
 	    String ascii = " \n";
 	    ascii += "         Welcome To:\n";
 	    ascii += " \n";
@@ -110,11 +114,6 @@ public class Woo{
 		return;
 	}
 
-	if(Driverman.money <= 0){
-	    Cutscenes.endingL();
-	    return;
-	}
-
 	if(Driverman.aK()){
 	    if(Driverman.burgerBought == 0){
 		Cutscenes.endingB();
@@ -125,6 +124,10 @@ public class Woo{
 		return;
 	    }
 	}
+
+	//bad ending (default)
+	Cutscenes.endingL();
+	    return;
 	
     }
 }
