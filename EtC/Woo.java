@@ -26,7 +26,11 @@ public class Woo{
 	UserInterface Rouletteman = new Roulette();
 	//UserInterface Blackjackman = new Blackjack();
 	UserInterface Foodman = new FoodCourt(FS, ST, MH);
+
+	//opening cutscene
+	//to be added
 	
+	//main game
 	while (Driverman.money > 0){
 	    String ascii = " \n";
 	    ascii += "         Welcome To:\n";
@@ -99,6 +103,13 @@ public class Woo{
 		return;
 	}
 
+	//good ending
+	//to be added
+	
+	//secret ending
+	//to be added
+	
+	//bad ending (default)
 	Cutscenes.endingL();
 	    return;
 	
