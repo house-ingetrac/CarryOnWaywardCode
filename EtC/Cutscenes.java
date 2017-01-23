@@ -24,7 +24,7 @@ public class Cutscenes{
 	System.out.println(s);
     }
 
-    public static void EndingB(){
+    public static void endingB(){
 	String s = "";
 	s += "You have defeated my henchmen, and I can retain you here no longer.\n";
 	s += "Have a nice day, and thank you for coming to the Lucky Sevens Casino.\n";

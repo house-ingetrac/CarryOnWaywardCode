@@ -5,6 +5,8 @@ public class Woo{
     public boolean slotsKill = false;
     public boolean rouletteKill = false;
     public boolean blackjackKill = false;
+    public boolean allKill = false;
+    public int burgerBought = 0;
     
     private int counter = 0;
 
@@ -17,6 +19,12 @@ public class Woo{
 	return money;
     }
 
+    public boolean aK(){
+	if(slotsKill == true && rouletteKill == true && blackjackKill == true){
+	    allKill = true;
+	}
+    }
+
     public static void main(String[] args){
 	Woo Driverman = new Woo();
 	Burger FS = new FutureSight(Driverman);
@@ -27,12 +35,10 @@ public class Woo{
 	//UserInterface Blackjackman = new Blackjack();
 	UserInterface Foodman = new FoodCourt(FS, ST, MH);
 
-	if(Driverman.money <= 0){
-	    Cutscenes.endingL();
-	    return;
-	}
+	Driverman.aK();
 	
-	while (Driverman.money > 0){
+	while (Driverman.money > 0 && ! Driverman.allKill){
+	    
 	    String ascii = " \n";
 	    ascii += "         Welcome To:\n";
 	    ascii += " \n";
@@ -102,6 +108,22 @@ public class Woo{
 	        Foodman.play();
 	    if (result == 5)
 		return;
+	}
+
+	if(Driverman.money <= 0){
+	    Cutscenes.endingL();
+	    return;
+	}
+
+	if(Driverman.aK()){
+	    if(Driverman.burgerBought == 0){
+		Cutscenes.endingB();
+		return;
+	    }
+	    else{
+		Cutscenes.endingW();
+		return;
+	    }
 	}
 	
     }

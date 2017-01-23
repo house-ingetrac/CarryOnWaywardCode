@@ -60,7 +60,7 @@ public class Roulette extends Minigames{
 
 	    if (response == 3){
 		RPGBattle();
-		return;
+		//return;
 	    }
 	}
     }
