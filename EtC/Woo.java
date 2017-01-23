@@ -114,7 +114,7 @@ public class Woo{
 		return;
 	}
 
-	if(Driverman.aK()){
+	if(Driverman.allKill){
 	    if(Driverman.burgerBought == 0){
 		Cutscenes.endingB();
 		return;
